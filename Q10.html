@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q10 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<form>
+  	<select class="target">
+    	<option class="opt" value="option1" selected="selected">Option 1</option>
+    	<option class="opt" value="option2">Option 2</option>
+    	<option class="opt" value="option3">Option 3</option>
+    	<option class="opt" value="option4">Option 4</option>
+  </select>
+</form>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("select").hover(function(){
+				$(".opt").css("background-color", "yellow");
+			})
+		});
+	</script>
+</html>

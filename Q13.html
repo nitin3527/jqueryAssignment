@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q13 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div>
+		<ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+		</ul>
+	</div>
+	<div>
+		<p>here you go</p>
+	</div>
+	<div>
+		<h4>sort heading</h4>
+	</div>
+</body>
+	<script type="text/javascript">
+		let max = -1;
+		$(document).ready(function(){
+			$("div").each(function(){
+				let h = $(this).height();
+				max = h > max ? h: max;
+			})
+			console.log('max height of element is',max);
+		});
+	</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q12 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div style="border: 2px solid black">
+		<ul>
+			<li class="">one</li>
+			<li>two</li>
+			<li>three</li>
+			<li>four</li>
+		</ul>
+		<p>No propogation here</p>
+	</div>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("div").click(function(){
+				console.log('you clicked div tag');
+			});
+			$("li").click(function(e){
+				e.stopPropagation()
+				console.log('you clicked li only');
+			});
+			$("p").click(function(e){
+				console.log('you clicked p tag');
+			})
+		});
+	</script>
+</html>

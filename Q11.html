@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q11 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<h3>Preventing google to open</h3>
+	<button><a href="https://www.google.com/">click me</a></button>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("a").click(function(e){
+				e.preventDefault();
+				console.log(' Event prevented');
+			})
+		});
+	</script>
+</html>

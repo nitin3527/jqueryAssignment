@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q8 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div></div>
+	<button>click Me</button>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function() {
+				$("div").append("<p>appended dynamic comtext</p>");
+				$("p").on("click", function(){
+					$("div").append("<p>appended dynamic comtext with .on click</p>");	
+				});
+			});
+		});
+	</script>
+</html>

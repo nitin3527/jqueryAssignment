@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q7 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<p id="addText">Add text here</p>
+	<button>click me</button>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#addText").append("<br>new text added <br>");
+			});
+			$("#addText").click(function(){
+				$("#addText").append("<br> again adding new text");
+			});
+		});
+	</script>
+</html>

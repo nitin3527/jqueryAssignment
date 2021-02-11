@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q14 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<table>
+  <tr>
+    <th>Name</th>
+    <th>Experience</th>
+  </tr>
+  <tr>
+    <td>Nitin</td>
+    <td class="findNum">2</td>
+  </tr>
+  <tr>
+    <td>mayank</td>
+    <td class="findNum">11</td>
+  </tr>
+  <tr>
+    <td>raghav</td>
+    <td class="findNum">5</td>
+  </tr>
+  <tr>
+    <td>yash</td>
+    <td class="findNum">16</td>
+  </tr>
+</table>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".findNum").each(function(){
+				if($(this).text() > 10) $(this).css('background-color', 'orange');	
+			})
+		});
+	</script>
+</html>

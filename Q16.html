@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q16 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<p id="dv">ajax delete request is going to be performed</p>
+	<table><tr> <button>cross button</button></tr></table>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+        		url: "https://jsonplaceholder.typicode.com/todos/2",
+        		dataType: "json",
+        		type: 'DELETE',
+        		success: function(res){
+          			setTimeout(function(){
+          				console.log('inside setTimeout');
+          				$('#dv').html('<br>' + res);
+          				$('button').remove();
+          				$('table tr').append('</br>button removed');
+          			},1000);
+        		},
+       		});
+		});
+	</script>

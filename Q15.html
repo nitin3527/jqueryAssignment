@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Q15 Assignment</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<h3>Ajax call</h3>
+  <p id="ajaxResult"></p>
+</body>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$.ajax({
+        url: "https://jsonplaceholder.typicode.com/todos/2",
+        dataType: "json",
+        success: function(res){
+          $("#ajaxResult").html("<b>" + JSON.stringify(res) + "</b>");
+        },
+        });
+		});
+	</script>
