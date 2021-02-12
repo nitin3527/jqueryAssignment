@@ -6,7 +6,20 @@
 </head>
 <body>
 	<p id="dv">ajax delete request is going to be performed</p>
-	<table><tr> <button>cross button</button></tr></table>
+	<table style="border: 1px solid grey">
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+		</tr>
+		<tr>
+			<td>Nitin</td>
+			<td>23</td>
+		</tr>
+		<tr>
+			<td>harry</td>
+			<td>22</td>
+		</tr>
+	<button>cross button</button></table>
 </body>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -15,12 +28,10 @@
         		dataType: "json",
         		type: 'DELETE',
         		success: function(res){
-          			setTimeout(function(){
-          				console.log('inside setTimeout');
-          				$('#dv').html('<br>' + res);
-          				$('button').remove();
-          				$('table tr').append('</br>button removed');
-          			},1000);
+          				$("button").on('click', function(){
+          					$('#dv').html('<br>' + res);
+          					$('tr').remove();
+          				});
         		},
        		});
 		});
